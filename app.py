@@ -46,13 +46,13 @@ def makeWebhookResult(req):
         if operasi=="/":
             hasil=number/number1
 
-            return {
-                "speech": hasil,
-                "displayText": hasil,
-                #"data": {},
-                #"contextOut": [],
-                "source": hasil
-            }
+        return {
+            "speech": hasil,
+            "displayText": hasil,
+            #"data": {},
+            #"contextOut": [],
+            "source": hasil
+        }
 
 
 if __name__ == '__main__':
