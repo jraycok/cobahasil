@@ -47,11 +47,11 @@ def makeWebhookResult(req):
             hasil=number/number1
 
         return {
-            "speech": hasil,
-            "displayText": hasil,
+            "speech": "Hasil : "+hasil,
+            "displayText": "Hasil : "+hasil,
             #"data": {},
             #"contextOut": [],
-            "source": hasil
+            "source": "Hasil : "+hasil
         }
 
 
