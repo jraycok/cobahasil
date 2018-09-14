@@ -32,8 +32,20 @@ def webhook():
 
 
 def makeWebhookResult(req):
-     if req.get("result").get("action") == "halo":
-            hasil=req.get("result").get("resolvedQuery")
+     if req.get("result").get("action") == "penjumlahan":
+            number1=req.get("result").get("parameters").get("number1")
+            operasi=req.get("result").get("parameters").get("OPerasi")
+            number2=req.get("result").get("parameters").get("number2")
+
+            if operasi=="+":
+                hasil=number1+number2
+            if operasi=="-":
+                hasil=number1-number2
+            if operasi=="*":
+                hasil=number1*number2
+            if operasi=="/":
+                hasil=number1/number2
+
             return {
                 "speech": hasil,
                 "displayText": hasil,
