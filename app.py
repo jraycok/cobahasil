@@ -33,18 +33,18 @@ def webhook():
 
 def makeWebhookResult(req):
      if req.get("result").get("action") == "penjumlahan":
-        number1=req.get("result").get("parameters").get("number1")
+        number1=req.get("result").get("parameters").get("number")
         operasi=req.get("result").get("parameters").get("OPerasi")
-        number2=req.get("result").get("parameters").get("number2")
+        number2=req.get("result").get("parameters").get("number")
 
         if operasi=="+":
-            hasil=number1+number2
+            hasil=number+number1
         if operasi=="-":
-            hasil=number1-number2
+            hasil=number-number1
         if operasi=="*":
-            hasil=number1*number2
+            hasil=number*number1
         if operasi=="/":
-            hasil=number1/number2
+            hasil=number/number1
 
             return {
                 "speech": hasil,
