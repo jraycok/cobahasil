@@ -33,7 +33,7 @@ def webhook():
 
 def makeWebhookResult(req):
      if req.get("result").get("action") == "halo":
-            hasil=req.get("result").get(resolvedQuery)
+            hasil=req.get("result").get("resolvedQuery")
             return {
                 "speech": hasil,
                 "displayText": hasil,
