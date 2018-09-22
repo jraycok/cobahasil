@@ -54,6 +54,9 @@ def makeWebhookResult(req):
             "source": "Hasil perhitungan: "+str(hasil)
         }
 
+        app.intent('setup_push', (conv) => {
+          conv.ask(new UpdatePermission({intent: 'tell_latest_tip'}));
+        });
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
